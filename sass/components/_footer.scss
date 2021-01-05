@@ -1,0 +1,134 @@
+/* ------FOOTER------ */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--secondary-background-color);
+
+  &__join {
+    margin-right: 93px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+  &__contacts {
+    margin-right: 83px;
+  }
+
+  &__social-list {
+    width: 206px;
+  }
+}
+
+.contacts__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  color: var(--secondary-accent-color);
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.contacts__link {
+  @extend .contacts__text;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contacts__address {
+  display: flex;
+  flex-direction: column;
+}
+
+.join__text,
+.subscription__text {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-transform: uppercase;
+
+  color: var(--secondary-accent-color);
+}
+
+.social-list__icon--fill {
+  fill: currentColor;
+}
+
+.social-list__link--footer {
+  color: var(--secondary-accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.subscription__form {
+  display: flex;
+}
+
+.subscription__mail {
+  display: inline-block;
+  width: 358px;
+  height: 50px;
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  margin-right: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--secondary-background-color);
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+  border: none;
+  color: var(--secondary-accent-color);
+  background-color: var(--accent-color);
+  border-radius: 4px;
+
+  &__icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+
+    fill: var(--secondary-accent-color);
+  }
+}
+/* ------END FOOTER------ */

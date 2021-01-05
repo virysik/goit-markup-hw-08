@@ -1,0 +1,60 @@
+body {
+  color: var(--main-primary-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  letter-spacing: 0.03em;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.navigation__link,
+.address__item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
