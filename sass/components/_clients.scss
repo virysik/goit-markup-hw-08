@@ -3,19 +3,27 @@
   background-color: var(--background-color);
 
   &__caption {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    /*margin-bottom: 50px;*/
   }
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -15px;
+    /*justify-content: space-between;*/
+  }
+
+  &__item {
+    margin: 15px;
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    width: 210px;
+    /* width: 170px;*/
     height: 90px;
 
     color: #afb1b8;

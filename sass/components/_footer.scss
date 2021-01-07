@@ -6,22 +6,25 @@
   background-color: var(--secondary-background-color);
 
   &__join {
-    margin-right: 93px;
+    margin-bottom: 60px;
+    /*margin-right: 93px;*/
   }
 
   &__container {
-    display: flex;
+    text-align: center;
+    /* display: flex;
     align-items: baseline;
-    justify-content: space-around;
+    justify-content: space-around;*/
   }
 
   &__contacts {
-    margin-right: 83px;
+    margin-bottom: 60px;
+    /*margin-right: 83px;*/
   }
 
-  &__social-list {
+  /* &__social-list {
     width: 206px;
-  }
+  }*/
 }
 
 .contacts__text {
@@ -75,19 +78,21 @@
   }
 }
 
-.subscription__form {
+/*.subscription__form {
   display: flex;
-}
+}*/
 
 .subscription__mail {
   display: inline-block;
-  width: 358px;
+  width: 450px;
+  /* width: 358px;*/
   height: 50px;
   padding-top: 15px;
   padding-right: 16px;
   padding-bottom: 15px;
   padding-left: 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
+  /*margin-right: 12px;*/
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -111,6 +116,7 @@
   padding-right: 28px;
   padding-bottom: 10px;
   padding-left: 28px;
+  margin: 0 auto; /*mobile*/
 
   font-weight: 700;
   font-size: 16px;

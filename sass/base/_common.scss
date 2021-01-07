@@ -3,6 +3,10 @@ body {
   font-family: var(--main-font);
   font-style: normal;
   letter-spacing: 0.03em;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -32,18 +36,14 @@ ul {
   list-style: none;
 }
 
-.navigation__link,
-.address__item {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-}
-
 .social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  /*justify-content: space-between;*/
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-list__icon {

@@ -3,19 +3,21 @@
   background-color: var(--third-background-color);
 
   &__caption {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    /*margin-bottom: 50px;*/
   }
 
-  &__list {
+  /* &__list {
     display: flex;
-  }
+  }*/
 
   &__title {
     margin-bottom: 10px;
 
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 1.188;
+    /* line-height: 1.19;*/
 
     color: var(--main-secondary-color);
   }
@@ -25,13 +27,14 @@
 
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.19;
+    /* line-height: 1.19;*/
   }
 
   &__description {
     padding-top: 30px;
     padding-right: 32px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px;*/
+    padding-bottom: 24px;
     padding-left: 32px;
 
     text-align: center;
@@ -45,7 +48,8 @@
   border-radius: 0px 0px 4px 4px;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
+    /*margin-right: 30px;*/
   }
 }
 

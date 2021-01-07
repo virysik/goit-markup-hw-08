@@ -4,7 +4,15 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+
+  padding: 93px 15px 94px 15px; /* just for mobile*/
+
+  @media screen and (min-width: 768px) {
+    padding: 208px 159px 207px 159px;
+  }
+
+  overflow-y: scroll;
 
   opacity: 1;
   visibility: visible;
@@ -23,16 +31,21 @@
 }
 
 .modal {
-  position: absolute;
+  position: relative;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 
   padding: 40px;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  /*width: 528px;
+  min-height: 581px;*/
 
   background-color: var(--secondary-accent-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
   &__form {
     display: flex;
@@ -61,7 +74,8 @@
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
+    /*line-height: 1.15;*/
     text-align: center;
 
     color: var(--main-secondary-color);
@@ -142,6 +156,7 @@
 
 .modal__textarea {
   &--sizes {
+    margin-top: 4px;
     padding: 12px 16px;
     height: 120px;
     resize: none;
@@ -158,12 +173,19 @@
 
 .modal__label {
   margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
 
   &::placeholder {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 1.667;
+    font-size: 14px;
+    line-height: 1.143;
+    /*font-size: 12px;
+    line-height: 1.667;*/
     letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
   }
 
   &--last {
@@ -172,19 +194,15 @@
 }
 
 .modal__policy {
-  &-link {
-    margin-left: 4px;
-    color: var(--accent-color);
-    text-decoration: underline;
-  }
-
   &-label {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 1.167;
+    /* font-size: 14px;
+    line-height: 1.714;*/
     margin-bottom: 30px;
 
     &::before {
@@ -202,6 +220,12 @@
       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+  }
+
+  &-link {
+    margin-left: 1px; /*for desktop 4px*/
+    color: var(--accent-color);
+    text-decoration: underline;
   }
 
   &-input:checked + &-label::before {
