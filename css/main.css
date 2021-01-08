@@ -688,7 +688,8 @@ ul {
 }
 
 .contacts__text:not(:last-child), .contacts__link:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  /* margin-bottom: 9px; desktop*/
 }
 
 .contacts__link {

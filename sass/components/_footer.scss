@@ -34,7 +34,8 @@
   color: var(--secondary-accent-color);
 
   &:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    /* margin-bottom: 9px; desktop*/
   }
 }
 
