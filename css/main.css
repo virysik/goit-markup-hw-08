@@ -88,7 +88,19 @@ ul {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /*width: 1200px;*/
+  width: 480px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -146,13 +158,24 @@ ul {
 
 /* ------HEADER------ */
 .header {
-  position: relative;
   background-color: var(--secondary-accent-color);
-  /*border-bottom: 1px solid #ececec;*/
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    border-bottom: 1px solid #ececec;
+  }
 }
 
 .header__container {
+  position: relative;
   background-color: var(--secondary-accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: flex;
+  }
 }
 
 .header__button {
@@ -169,8 +192,10 @@ ul {
   fill: var(--accent-color);
 }
 
-.header__icon-close {
-  display: none;
+@media screen and (min-width: 768px) {
+  .header__button {
+    display: none;
+  }
 }
 
 .header__button.is-open .header__icon-close {
@@ -181,25 +206,38 @@ ul {
   display: none;
 }
 
+.header__icon-close {
+  display: none;
+}
+
 .header__mobile-menu {
   display: flex;
   align-items: center;
 }
 
-.header__menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--secondary-accent-color);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+@media screen and (max-width: 767px) {
+  .header__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-accent-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+  .header__menu.is-open {
+    display: block;
+    padding: 60px 0px;
+    border-top: 1px solid #ececec;
+    z-index: 999;
+  }
 }
 
-.header__menu.is-open {
-  display: block;
-  padding: 60px 0px;
-  border-top: 1px solid #ececec;
+@media screen and (min-width: 768px) {
+  .header__menu {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .navigation__link {
@@ -220,9 +258,21 @@ ul {
   margin-bottom: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .navigation__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
 .navigation__list {
   text-align: center;
   margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    margin-bottom: 0;
+  }
 }
 
 .navigation__item--active {
@@ -372,6 +422,7 @@ ul {
 }*/
 /* ------HERO------ */
 .hero {
+  margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
@@ -545,9 +596,17 @@ ul {
 /* ------OUR TEAM------ */
 .team {
   background-color: var(--third-background-color);
+  margin: 0 auto;
+  width: 480px;
   /* &__list {
     display: flex;
   }*/
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    width: 768px;
+  }
 }
 
 .team__caption {
@@ -657,10 +716,18 @@ ul {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  margin: 0 auto;
   background-color: var(--secondary-background-color);
+  width: 480px;
   /* &__social-list {
     width: 206px;
   }*/
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 768px;
+  }
 }
 
 .footer__join {
@@ -788,9 +855,9 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
-  padding: 93px 15px 94px 15px;
+  padding: 93px 15px;
   /* just for mobile*/
   overflow-y: scroll;
   opacity: 1;
@@ -802,7 +869,7 @@ ul {
 
 @media screen and (min-width: 768px) {
   .backdrop {
-    padding: 208px 159px 207px 159px;
+    padding-top: 208px;
   }
 }
 
@@ -814,17 +881,24 @@ ul {
 
 .modal {
   position: relative;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
+  margin: 0 auto;
   padding: 40px;
-  width: 450px;
-  /*width: 528px;
-  min-height: 581px;*/
+  max-width: 450px;
+  width: 100%;
   background-color: var(--secondary-accent-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__form {

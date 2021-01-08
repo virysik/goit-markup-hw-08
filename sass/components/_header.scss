@@ -1,12 +1,19 @@
 /* ------HEADER------ */
 .header {
-  position: relative;
   background-color: var(--secondary-accent-color);
-  /*border-bottom: 1px solid #ececec;*/
-}
 
-.header__container {
-  background-color: var(--secondary-accent-color);
+  @media screen and (min-width: 768px) {
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__container {
+    position: relative;
+    background-color: var(--secondary-accent-color);
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
 }
 
 .header__button {
@@ -21,17 +28,22 @@
   &:focus .header__icons {
     fill: var(--accent-color);
   }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &.is-open {
+    .header__icon-close {
+      display: block;
+    }
+    .header__icon-menu {
+      display: none;
+    }
+  }
 }
 
 .header__icon-close {
-  display: none;
-}
-
-.header__button.is-open .header__icon-close {
-  display: block;
-}
-
-.header__button.is-open .header__icon-menu {
   display: none;
 }
 
@@ -41,20 +53,28 @@
 }
 
 .header__menu {
-  display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
 
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--secondary-accent-color);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 1px 3px rgba(0, 0, 0, 0.16);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-accent-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
 
-  &.is-open {
-    display: block;
-    padding: 60px 0px;
-    border-top: 1px solid #ececec;
+    &.is-open {
+      display: block;
+      padding: 60px 0px;
+      border-top: 1px solid #ececec;
+      z-index: 999;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -76,11 +96,19 @@
 
 .navigation__item:not(:last-child) {
   margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .navigation__list {
   text-align: center;
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .navigation__item--active {

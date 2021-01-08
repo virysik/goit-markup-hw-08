@@ -1,6 +1,12 @@
 /* ------OUR TEAM------ */
 .team {
   background-color: var(--third-background-color);
+  margin: 0 auto;
+
+  width: 480px;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
 
   &__caption {
     margin-bottom: 30px;

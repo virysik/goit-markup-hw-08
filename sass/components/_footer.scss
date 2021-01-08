@@ -2,8 +2,14 @@
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  margin: 0 auto;
 
   background-color: var(--secondary-background-color);
+
+  width: 480px;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
 
   &__join {
     margin-bottom: 60px;

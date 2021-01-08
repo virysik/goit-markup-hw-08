@@ -3,13 +3,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 
-  padding: 93px 15px 94px 15px; /* just for mobile*/
+  padding: 93px 15px; /* just for mobile*/
 
   @media screen and (min-width: 768px) {
-    padding: 208px 159px 207px 159px;
+    padding-top: 208px;
   }
 
   overflow-y: scroll;
@@ -32,20 +32,24 @@
 
 .modal {
   position: relative;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
-
+  margin: 0 auto;
   padding: 40px;
-  width: 450px;
-  /*width: 528px;
-  min-height: 581px;*/
+  max-width: 450px;
+  width: 100%;
 
   background-color: var(--secondary-accent-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 528px;
+    min-height: 581px;
+  }
 
   &__form {
     display: flex;
