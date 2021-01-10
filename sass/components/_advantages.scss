@@ -5,7 +5,19 @@
   &__item {
     min-width: 270px;
     min-height: 101px;
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      flex-basis: calc((100% - 60px) / 2);
+    }
   }
+
   /*
   &__item:not(:last-child) {
     margin-right: 30px;
@@ -14,18 +26,18 @@
   &__title {
     margin-bottom: 10px;
 
-    text-align: center; /*just mobile version*/
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.143;
     text-transform: uppercase;
 
     color: var(--main-secondary-color);
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
-  /*
-  &__list {
-    display: flex;
-  }*/
 
   &__text {
     font-weight: 400;
@@ -48,6 +60,14 @@
   &__icon {
     width: 70px;
     height: 70px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
   }
 }
 /* ------END ADVANTAGES------ */
