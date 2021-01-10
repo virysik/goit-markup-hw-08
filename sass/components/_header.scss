@@ -12,6 +12,7 @@
 
     @media screen and (min-width: 768px) {
       display: flex;
+      justify-content: space-between;
     }
   }
 }
@@ -75,6 +76,9 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin-left: 88px;
   }
 }
 
@@ -92,6 +96,13 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.143;
+  }
 }
 
 .navigation__item:not(:last-child) {
@@ -99,6 +110,7 @@
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
+    margin-right: 50px;
   }
 }
 
@@ -107,12 +119,15 @@
   margin-bottom: 60px;
 
   @media screen and (min-width: 768px) {
+    display: flex;
     margin-bottom: 0;
   }
 }
 
 .navigation__item--active {
-  padding-bottom: 12px;
+  @media screen and (max-width: 767px) {
+    padding-bottom: 12px;
+  }
 }
 
 .navigation__link--active {
@@ -124,7 +139,11 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    /*transform: translateY(50%); for desktop only*/
+
+    @media screen and (min-width: 768px) {
+      transform: translateY(25%);
+    }
+    /*; for desktop only*/
 
     content: "";
     display: block;
@@ -139,18 +158,8 @@
 .address {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.address__item {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.167;
-  letter-spacing: 0.02em;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
+  @media screen and (max-width: 767px) {
+    align-items: center;
   }
 }
 
@@ -158,12 +167,31 @@
   display: inline-flex;
   align-items: center;
 
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+
   color: var(--main-primary-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 1.167;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 
