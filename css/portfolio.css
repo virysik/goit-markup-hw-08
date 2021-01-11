@@ -302,7 +302,6 @@ ul {
   position: absolute;
   bottom: 0;
   left: 0;
-  /*; for desktop only*/
   content: "";
   display: block;
   width: 100%;
@@ -457,10 +456,6 @@ ul {
   background-color: var(--secondary-accent-color);
   margin: 0 auto;
   width: 480px;
-  /*  &__list {
-    display: flex;
-    flex-wrap: wrap;
-  }*/
 }
 
 @media screen and (min-width: 768px) {
@@ -477,6 +472,12 @@ ul {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__description:nth-child(-n + 2) {
+    height: 146px;
+  }
 }
 
 .portfolio__title {
@@ -498,11 +499,26 @@ ul {
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
 .buttons {
   margin-bottom: 40px;
-  /*text-align: center; desktop*/
   margin-left: auto;
   margin-right: auto;
+  font-size: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .buttons__btn {
@@ -513,6 +529,7 @@ ul {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
+  letter-spacing: 0.03em;
   color: var(--main-secondary-color);
   background-color: var(--third-background-color);
   border-radius: 4px;
@@ -523,7 +540,7 @@ ul {
 }
 
 .buttons__btn:not(:last-child) {
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .buttons__btn:nth-child(-n + 3) {
@@ -547,6 +564,13 @@ ul {
   &:nth-last-child(-n + 3) {
     margin-bottom: 0;
   }*/
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    width: 354px;
+    margin: 15px;
+  }
 }
 
 .portfolio__link {
@@ -608,6 +632,12 @@ ul {
   /*margin-right: 93px;*/
 }
 
+@media screen and (min-width: 768px) {
+  .footer__join {
+    margin-bottom: 0;
+  }
+}
+
 .footer__container {
   text-align: center;
   /* display: flex;
@@ -618,6 +648,12 @@ ul {
 .footer__contacts {
   margin-bottom: 60px;
   /*margin-right: 83px;*/
+}
+
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__text, .contacts__link {
@@ -720,6 +756,15 @@ ul {
   width: 24px;
   height: 24px;
   fill: var(--secondary-accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .tablet-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
 }
 
 /* ------END FOOTER------ */

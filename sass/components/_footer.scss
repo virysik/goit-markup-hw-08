@@ -13,6 +13,9 @@
 
   &__join {
     margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
     /*margin-right: 93px;*/
   }
 
@@ -25,6 +28,9 @@
 
   &__contacts {
     margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
     /*margin-right: 83px;*/
   }
 
@@ -142,6 +148,15 @@
     height: 24px;
 
     fill: var(--secondary-accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tablet-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
   }
 }
 /* ------END FOOTER------ */
