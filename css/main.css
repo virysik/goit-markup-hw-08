@@ -652,6 +652,12 @@ ul {
   padding-bottom: 94px;
 }
 
+@media screen and (min-width: 768px) {
+  .works {
+    display: block;
+  }
+}
+
 .works__title {
   margin-bottom: 50px;
 }
