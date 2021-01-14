@@ -2,9 +2,12 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 1.179;
-  /*font-size: 36px;
-  line-height: 1.17;*/
   text-align: center;
 
   color: var(--main-secondary-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }

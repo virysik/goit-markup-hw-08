@@ -108,8 +108,6 @@ ul {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.167;
-  /*font-size: 26px;
-  line-height: 1.192;*/
   display: inline-block;
   color: var(--accent-color);
 }
@@ -122,18 +120,31 @@ ul {
   color: var(--secondary-accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.192;
+  }
+}
+
 .header__logo {
   padding-top: 16px;
   padding-bottom: 16px;
   /*margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;*/
+  */
 }
 
 @media screen and (min-width: 768px) {
   .header__logo {
     padding-top: 26px;
     padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -144,8 +155,13 @@ ul {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  /* padding-top: 94px;
-  padding-bottom: 94px;*/
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .footer--section {
@@ -316,6 +332,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .navigation__link--active::after {
+    transform: translateY(50%);
+  }
+}
+
 .address {
   display: flex;
   flex-direction: column;
@@ -324,6 +346,12 @@ ul {
 @media screen and (max-width: 767px) {
   .address {
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    display: block;
   }
 }
 
@@ -347,13 +375,36 @@ ul {
   color: var(--accent-color);
 }
 
+.address__item__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 @media screen and (min-width: 768px) {
   .address__item {
     font-size: 12px;
-    line-height: 1.167;
   }
   .address__item:not(:last-child) {
     margin-bottom: 10px;
+  }
+  .address__item__icon {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address__item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.143;
+  }
+  .address__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .address__item__icon {
+    margin-right: 10px;
   }
 }
 
@@ -464,6 +515,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    width: auto;
+  }
+}
+
 .portfolio__description {
   padding-top: 20px;
   padding-right: 24px;
@@ -474,8 +531,8 @@ ul {
   border-left: 1px solid #eeeeee;
 }
 
-@media screen and (min-width: 768px) {
-  .portfolio__description:nth-child(-n + 2) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__description--tablet {
     height: 146px;
   }
 }
@@ -485,6 +542,7 @@ ul {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 3px;
   color: var(--main-secondary-color);
 }
 
@@ -512,12 +570,19 @@ ul {
   margin-left: auto;
   margin-right: auto;
   font-size: 0;
+  display: table;
 }
 
 @media screen and (min-width: 768px) {
   .buttons {
     text-align: center;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .buttons {
+    margin-bottom: 34px;
   }
 }
 
@@ -543,8 +608,10 @@ ul {
   margin-right: 8px;
 }
 
-.buttons__btn:nth-child(-n + 3) {
-  margin-bottom: 15px;
+@media screen and (max-width: 767px) {
+  .buttons__btn:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
 }
 
 .buttons__btn:hover, .buttons__btn:focus {
@@ -553,23 +620,24 @@ ul {
   background-color: var(--accent-color);
 }
 
-.portfolio__item {
-  margin-bottom: 30px;
-  /* width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  
-  &:nth-child(3n) {
-    margin-right: 0;
+@media screen and (max-width: 767px) {
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 30px;
   }
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }*/
 }
 
 @media screen and (min-width: 768px) {
   .portfolio__item {
-    width: 354px;
+    margin-bottom: 0;
     margin: 15px;
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    width: 370px;
+    flex-basis: calc((100% - 3 * 30px) / 3);
   }
 }
 
@@ -616,9 +684,6 @@ ul {
   margin: 0 auto;
   background-color: var(--secondary-background-color);
   width: 480px;
-  /* &__social-list {
-    width: 206px;
-  }*/
 }
 
 @media screen and (min-width: 768px) {
@@ -627,9 +692,14 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer {
+    width: auto;
+  }
+}
+
 .footer__join {
   margin-bottom: 60px;
-  /*margin-right: 93px;*/
 }
 
 @media screen and (min-width: 768px) {
@@ -638,21 +708,44 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__join {
+    margin-right: 93px;
+  }
+}
+
 .footer__container {
   text-align: center;
-  /* display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    text-align: left;
+    display: flex;
     align-items: baseline;
-    justify-content: space-around;*/
+    justify-content: space-around;
+  }
 }
 
 .footer__contacts {
   margin-bottom: 60px;
-  /*margin-right: 83px;*/
 }
 
 @media screen and (min-width: 768px) {
   .footer__contacts {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    margin-right: 83px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__social-list {
+    width: 206px;
   }
 }
 
@@ -665,7 +758,12 @@ ul {
 
 .contacts__text:not(:last-child), .contacts__link:not(:last-child) {
   margin-bottom: 8px;
-  /* margin-bottom: 9px; desktop*/
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__text:not(:last-child), .contacts__link:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .contacts__link {
@@ -703,20 +801,21 @@ ul {
   background-color: var(--accent-color);
 }
 
-/*.subscription__form {
-  display: flex;
-}*/
+@media screen and (min-width: 1200px) {
+  .subscription__form {
+    display: flex;
+  }
+}
+
 .subscription__mail {
   display: inline-block;
   width: 450px;
-  /* width: 358px;*/
   height: 50px;
   padding-top: 15px;
   padding-right: 16px;
   padding-bottom: 15px;
   padding-left: 16px;
   margin-bottom: 20px;
-  /*margin-right: 12px;*/
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
@@ -728,6 +827,14 @@ ul {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription__mail {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .submit {
@@ -764,6 +871,12 @@ ul {
     align-items: baseline;
     justify-content: space-around;
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tablet-wrapper {
+    margin-bottom: 0;
   }
 }
 

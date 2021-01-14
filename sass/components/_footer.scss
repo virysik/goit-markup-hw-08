@@ -10,20 +10,28 @@
   @media screen and (min-width: 768px) {
     width: 768px;
   }
+  @media screen and (min-width: 1200px) {
+    width: auto;
+  }
 
   &__join {
     margin-bottom: 60px;
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
     }
-    /*margin-right: 93px;*/
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
 
   &__container {
     text-align: center;
-    /* display: flex;
-    align-items: baseline;
-    justify-content: space-around;*/
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+    }
   }
 
   &__contacts {
@@ -31,12 +39,16 @@
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
     }
-    /*margin-right: 83px;*/
+    @media screen and (min-width: 1200px) {
+      margin-right: 83px;
+    }
   }
 
-  /* &__social-list {
-    width: 206px;
-  }*/
+  &__social-list {
+    @media screen and (min-width: 1200px) {
+      width: 206px;
+    }
+  }
 }
 
 .contacts__text {
@@ -47,7 +59,9 @@
 
   &:not(:last-child) {
     margin-bottom: 8px;
-    /* margin-bottom: 9px; desktop*/
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -91,21 +105,21 @@
   }
 }
 
-/*.subscription__form {
-  display: flex;
-}*/
+.subscription__form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
 
 .subscription__mail {
   display: inline-block;
   width: 450px;
-  /* width: 358px;*/
   height: 50px;
   padding-top: 15px;
   padding-right: 16px;
   padding-bottom: 15px;
   padding-left: 16px;
   margin-bottom: 20px;
-  /*margin-right: 12px;*/
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -118,6 +132,12 @@
     line-height: 1.25;
 
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
   }
 }
 
@@ -151,12 +171,15 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .tablet-wrapper {
+.tablet-wrapper {
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
     margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
   }
 }
 /* ------END FOOTER------ */
