@@ -187,12 +187,7 @@ ul {
 /* ------HEADER------ */
 .header {
   background-color: var(--secondary-accent-color);
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    border-bottom: 1px solid #ececec;
-  }
+  border-bottom: 1px solid #ececec;
 }
 
 .header__container {
@@ -257,7 +252,6 @@ ul {
   .header__menu.is-open {
     display: block;
     padding: 60px 0px;
-    border-top: 1px solid #ececec;
     z-index: 999;
   }
 }
